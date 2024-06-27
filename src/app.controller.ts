@@ -7,7 +7,7 @@ export class AppController {
   @Get()
   getHello(@Query() query) {
     console.log(query);
-    return query.hub_challenge;
+    return query['hub.challenge'];
   }
   @Post()
   handlePost(@Param() param) {
