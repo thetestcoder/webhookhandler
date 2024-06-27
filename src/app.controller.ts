@@ -1,4 +1,4 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Query, Post, Param } from '@nestjs/common';
 import { AppService } from './app.service';
 @Controller()
 export class AppController {
@@ -6,6 +6,11 @@ export class AppController {
 
   @Get()
   getHello(@Query() query) {
+    console.log(query);
     return query.hub_challenge;
+  }
+  @Post()
+  handlePost(@Param() param) {
+    console.log(param)
   }
 }
