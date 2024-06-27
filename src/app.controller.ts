@@ -6,6 +6,6 @@ export class AppController {
 
   @Get()
   getHello(@Query() query) {
-    return query.hub_verify_token;
+    return query.hub_challenge;
   }
 }
